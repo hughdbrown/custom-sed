@@ -35,7 +35,8 @@ class SedFile(object):
         line_iter = ((i, self.data[i])) for line_no in reversed(range(0, end))
         return next((i for i, line in line_iter if match in line), None)
 
-    def sort(start=None, end=None, key=str):
+    def sort(self, start=None, end=None, key=str):
         start = start if start is not None else 0
         end = end if end is not None else len(self.data)
         self.data[start:end] = sorted(self.data[start:end], key=key)
+        self.modified += len(self.data)
