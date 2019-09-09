@@ -40,3 +40,8 @@ class SedFile(object):
         end = end if end is not None else len(self.data)
         self.data[start:end] = sorted(self.data[start:end], key=key)
         self.modified += len(self.data)
+
+    def delete_lines(self, lines):
+        if lines:
+            self.data = [line for i, line in enumerate(lines) if i in set(lines)]
+            self.modified += len(lines)
