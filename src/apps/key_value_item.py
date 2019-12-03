@@ -3,7 +3,7 @@ from __future__ import absolute_import
 
 import re
 
-from lib import SedFile, main
+from lib import SedFile, main as umain
 
 RE_NEXT = re.compile(
     r"""
@@ -48,5 +48,9 @@ class KeyValueInjector(SedFile):
                 self.modified = True
 
 
+def main():
+    umain(KeyValueInjector)
+
+
 if __name__ == "__main__":
-    main(KeyValueInjector)
+    main()

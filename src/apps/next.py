@@ -4,7 +4,7 @@ from __future__ import absolute_import, print_function
 
 import re
 
-from lib import SedFile, main
+from lib import SedFile, main as umain
 
 HAS_OPT_ARG = re.compile(
     r"""
@@ -141,6 +141,10 @@ class NextInjector(SedFile):
                 self.modified += 1
             else:
                 print("{}|{}".format(g["next"], m))
+
+
+def main():
+    umain(NextInjector)
 
 
 if __name__ == "__main__":

@@ -3,7 +3,7 @@ from __future__ import absolute_import
 
 import re
 
-from lib import SedFile, main
+from lib import SedFile, main as umain
 
 RE_ROLE_HELPER1 = re.compile(
     r"""
@@ -77,5 +77,9 @@ class RoleHelperInjector(SedFile):
             self.modified = True
 
 
+def main():
+    umain(RoleHelperInjector)
+
+
 if __name__ == "__main__":
-    main(RoleHelperInjector)
+    main()

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from __future__ import absolute_import
 
-from lib import SedFile, main
+from lib import SedFile, main as umain
 
 
 class ImportInjector(SedFile):
@@ -80,5 +80,9 @@ class ImportInjector(SedFile):
                 print("Could not find insertion point for {}".format(self.filename))
 
 
+def main():
+    umain(ImportInjector)
+
+
 if __name__ == "__main__":
-    main(ImportInjector)
+    main()

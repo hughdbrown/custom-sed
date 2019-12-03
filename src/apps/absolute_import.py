@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from __future__ import absolute_import, print_function
 
-from util import main
+from util import main as umain
 from sed_file import SedFile
 
 
@@ -87,5 +87,9 @@ class AbsoluteImportInjector(SedFile):
         self.delete_lines(j)
 
 
+def main():
+    umain(AbsoluteImportInjector)
+
+
 if __name__ == "__main__":
-    main(AbsoluteImportInjector)
+    main()

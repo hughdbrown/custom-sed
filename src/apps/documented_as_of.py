@@ -3,7 +3,7 @@ from __future__ import absolute_import
 
 import re
 
-from lib import SedFile, main
+from lib import SedFile, main as umain
 
 RE_NEXT = re.compile(
     r"""
@@ -45,5 +45,9 @@ class PublicDocumented(SedFile):
                 self.modified = True
 
 
+def main():
+    umain(PublicDocumented)
+
+
 if __name__ == "__main__":
-    main(PublicDocumented)
+    main()
