@@ -31,7 +31,7 @@ setup(
             # Python modifiers
             'autopylint=src.autopylint:main',
             'absolute_import=src.apps.absolute_import:main',
-            'constant_array=src.apps.constant-array:main',
+            'constant_array=src.apps.constant_array:main',
             'documented_as_of=src.apps.documented_as_of:main',
             'inject_import=src.apps.inject_import:main',
             'key_value_item=src.apps.key_value_item:main',
