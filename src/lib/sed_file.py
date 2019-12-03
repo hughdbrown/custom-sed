@@ -27,12 +27,12 @@ class SedFile(object):
 
     def next_match(self, match, start=None):
         start = start if start is not None else 0
-        line_iter = ((i, self.data[i])) for line_no in range(start, -1))
+        line_iter = ((i, self.data[i]) for i in range(start, -1))
         return next((i for i, line in line_iter if match in line), None)
 
     def prev_match(self, match, end=None):
         end = end if end is not None else len(self.data)
-        line_iter = ((i, self.data[i])) for line_no in reversed(range(0, end))
+        line_iter = ((i, self.data[i]) for i in reversed(range(0, end)))
         return next((i for i, line in line_iter if match in line), None)
 
     def sort(self, start=None, end=None, key=str):
