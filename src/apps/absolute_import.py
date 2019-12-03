@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 from __future__ import absolute_import, print_function
 
-from util import main as umain
-from sed_file import SedFile
+from src.lib.util import main as umain
+from src.lib.sed_file import SedFile
 
 
 class AbsoluteImportInjector(SedFile):

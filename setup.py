@@ -23,7 +23,7 @@ setup(
     # tests_require=reqs_from_file('test-requirements.txt'),
 
     # Main packages
-    packages=find_packages(),
+    packages=['src'],  # find_packages(),
     zip_safe=False,
 
     entry_points={

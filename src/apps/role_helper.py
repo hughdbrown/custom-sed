@@ -3,7 +3,7 @@ from __future__ import absolute_import
 
 import re
 
-from lib import SedFile, main as umain
+from src.lib import SedFile, main as umain
 
 RE_ROLE_HELPER1 = re.compile(
     r"""
