@@ -1,3 +1,9 @@
+exclude .gitignore
+exclude .travis.yml
+exclude .coverage
 include README.md
+prune .git
+prune build
+prune dist
+recursive-exclude *.egg-info *
 recursive-include src *.py
-
