@@ -30,7 +30,7 @@ setup(
     entry_points={
         'console_scripts': [
             # Python modifiers
-            'autopylint=src.autopylint:main',
+            'autopylint=src.apps.autopylint:main',
             'absolute_import=src.apps.absolute_import:main',
             'constant_array=src.apps.constant_array:main',
             'documented_as_of=src.apps.documented_as_of:main',
