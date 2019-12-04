@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from __future__ import absolute_import
 
-from src.lib import SedFile, main as umain
+from src import SedFile, main as umain
 
 
 class ImportInjector(SedFile):

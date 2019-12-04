@@ -4,8 +4,8 @@ from __future__ import absolute_import, print_function
 
 import re
 
-from src.lib import SedFile, main as umain
-
+from src import SedFile, main as umain
+`
 HAS_OPT_ARG = re.compile(
     r"""
     ^

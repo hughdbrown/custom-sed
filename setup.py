@@ -13,17 +13,18 @@ def reqs_from_file(filename):
 
 setup(
     name='custom_sed',
-    version='0.0.1',
+    version='0.0.2',
     description='Tool for automatically applying changes to a directory of files',
     author='Hugh Brown',
     author_email='hughdbrown@yahoo.com',
+    license='MIT',
 
     # Required packages
     install_requires=reqs_from_file('requirements.txt'),
-    # tests_require=reqs_from_file('test-requirements.txt'),
+    tests_require=reqs_from_file('test-requirements.txt'),
 
     # Main packages
-    packages=['src'],  # find_packages(),
+    packages=['src'],
     zip_safe=False,
 
     entry_points={

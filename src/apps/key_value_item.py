@@ -3,7 +3,7 @@ from __future__ import absolute_import
 
 import re
 
-from src.lib import SedFile, main as umain
+from src import SedFile, main as umain
 
 RE_NEXT = re.compile(
     r"""
