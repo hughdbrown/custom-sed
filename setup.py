@@ -1,4 +1,4 @@
-""" setup for custom-sed """
+""" setup for custom_sed """
 #!/usr/bin/env python
 
 from setuptools import setup, find_packages
@@ -13,7 +13,7 @@ def reqs_from_file(filename):
 
 setup(
     name='custom_sed',
-    version='0.0.2',
+    version='0.0.3',
     description='Tool for automatically applying changes to a directory of files',
     author='Hugh Brown',
     author_email='hughdbrown@yahoo.com',
